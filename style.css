@@ -1,0 +1,7 @@
+  .hexagon {
+    transition: all 1s;
+    transform-origin: 10% 10%;
+  }
+  .hexagon:hover {
+      transform: scale(1.2);
+  }
