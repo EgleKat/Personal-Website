@@ -80,9 +80,10 @@ function drawHexagon(projectInfo, cx, cy, w, h) {
     var f = function (x, y) {
         x = Math.round(x);
         y = Math.round(y);
+        var scaledX = Math.round(scale * (x - cx) + cx);
+        var scaledY = Math.round(scale * (y - cy) + cy);
 
-
-        scaledPoints+= (scale*(x-cx) + cx) + "," + (scale*(y-cy) + cy);
+        scaledPoints += scaledX + "," + scaledY + " ";
 
         points += x + "," + y + " ";
     }
@@ -94,24 +95,83 @@ function drawHexagon(projectInfo, cx, cy, w, h) {
     f(cx - w / 2.0, cy + h / 4.0);//bottom left
 
 
+
     var polygon = draw.polygon(points.trim())
-        .stroke({ width: 3 });
+        .stroke({ width: 3 })
+        .attr("vector-effect", "non-scaling-stroke");
     ;
+
+    var animateMouseover = draw.element('animate');
+    animateMouseover.attr({
+        begin: "indefinite",
+        fill: "freeze", //stay in the final frame of the animation on completion
+        attributeName: "points",
+        dur: "100ms",
+        to: scaledPoints.trim(),
+    });
+    polygon.node.appendChild(animateMouseover.node);
+
+    var animateMouseout = draw.element('animate');
+    animateMouseout.attr({
+        begin: "indefinite",
+        fill: "freeze", //stay in the final frame of the animation on completion
+        attributeName: "points",
+        dur: "100ms",
+        to: points.trim(),
+    });
+    polygon.node.appendChild(animateMouseout.node);
+
     //no project for this hexagon
     if (projectInfo === undefined) {
+
         polygon
             .fill('white')
     }
     //there is a project for this hexagon 
     else {
+        var pattern = draw.pattern(1, 1, function (add) {
+            add.rect(2 * w, 2 * h).fill("#fff");
+            var i = add.image("images/" + projectInfo.image);
+            i.attr({
+                x: -1.5 * w,
+                y: -1.5 * h,
+                width: 4 * w,
+                height: 4 * h
+            });
+            polygon.mouseover(function () {
+                i.animate(100).attr({
+                    x: -0.25 * w,
+                    y: -0.25 * h,
+                    width: 2 * w,
+                    height: 2 * h
+                });
+            });
+            polygon.mouseout(function () {
+                i.animate(100).attr({
+                    x: -1.5 * w,
+                    y: -1.5 * h,
+                    width: 4 * w,
+                    height: 4 * h
+                });
+            });
+            
+        });
+        pattern.attr({
+            patternUnits: "objectBoundingBox",
+            patternContentUnits: "userSpaceOnUse",
+        });
         polygon
             //change hexagon image
-            .fill("data/" + projectInfo.image);
+            // .fill('url(#image1)')
+            .fill(pattern);
+        //.fill(draw.image("images/" + projectInfo.image, 500, 500));
     }
     polygon.mouseover(function () {
-
-        var animation = polygon.animate(100).scale(1.5);
-        console.log("mouseover");
+        polygon.front();
+        document.getElementById(animateMouseover.id()).beginElement();
+    });
+    polygon.mouseout(function () {
+        document.getElementById(animateMouseout.id()).beginElement();
     });
 
 }
