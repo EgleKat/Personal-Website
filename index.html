@@ -1,47 +1,51 @@
 <!DOCTYPE html>
-<html lang="">
-  <head>
-    <meta charset="utf-8">
-    <meta name="description" content="">
-    <title>Egle Kat</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <script src="libraries/SVG.js/svg.js"></script>
-    <script src="libraries/jquery/jquery-3.4.1.js"></script>
-    
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="">
+  <title>Egle Kat</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script src="libraries/SVG.js/svg.js"></script>
+  <script src="libraries/jquery/jquery-3.4.1.js"></script>
+
 
 </head>
 
 <body>
-  <div id="drawing">
-      <svg height="1000" width="2000">
+  <svg id="drawing">
 
-          <defs>
-              <pattern id="image1" width="1" height="1">              
-                  <image x="-200" width="1696" height="938" xlink:href="images/housemyarea.png"></image>
-                  </pattern>
-          </defs>
+    <defs>
+      <pattern id="image1" width="1" height="1">
+        <image x="-200" width="1696" height="938" xlink:href="images/housemyarea.png"></image>
+      </pattern>
+    </defs>
 
 
-    <polygon points="850,75 958,137.5 958,262.5 850,325 742,262.6 742,137.5" fill="url(#image1)" stroke="#000" style="cursor: pointer;"
-      onmouseover="document.getElementById('hover-animation').beginElement()"
+    <polygon points="850,75 958,137.5 958,262.5 850,325 742,262.6 742,137.5" fill="url(#image1)" stroke="#000"
+      style="cursor: pointer;" onmouseover="document.getElementById('hover-animation').beginElement()"
       onclick="document.getElementById('click-animation').beginElement()"
       onmouseout="document.getElementById('default-animation').beginElement()">
-      <animate begin="shape.click" id="hover-animation" begin="indefinite" fill="freeze" attributeName="points" dur="200ms"  to="850,12.5  1012,106.25 1012,293.75 850,387.5 688,293.9 688,106.25" />
-      <animate begin="shape.click" id="default-animation" begin="indefinite" fill="freeze" attributeName="points" dur="200ms"  to="850,75  958,137.5 958,262.5 850,325 742,262.6 742,137.5" />
-      <animate begin="shape.click" id="click-animation" begin="indefinite" fill="freeze" attributeName="points" dur="200ms"  to="850,0  2000,0 2000,1000 850,1000 0,1000 0,0" />
-    
+      <animate begin="shape.click" id="hover-animation" begin="indefinite" fill="freeze" attributeName="points"
+        dur="200ms" to="850,12.5  1012,106.25 1012,293.75 850,387.5 688,293.9 688,106.25" />
+      <animate begin="shape.click" id="default-animation" begin="indefinite" fill="freeze" attributeName="points"
+        dur="200ms" to="850,75  958,137.5 958,262.5 850,325 742,262.6 742,137.5" />
+      <animate begin="shape.click" id="click-animation" begin="indefinite" fill="freeze" attributeName="points"
+        dur="200ms" to="850,0  2000,0 2000,1000 850,1000 0,1000 0,0" />
+
       <foreignObject class="button" x="46" y="22" width="200" height="300">
-          <a href=index.html>link</a>
-          
-          </foreignObject>
+        <a href=index.html>link</a>
+
+      </foreignObject>
     </polygon>
-   
     
-    </svg>
 
 
-  </div>
-  
+  </svg>
+
+
+
   <script src="script.js"></script>
 </body>
+
 </html>
