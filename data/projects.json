@@ -1,0 +1,25 @@
+[
+    {
+        "hexagon" : 10,
+        "title": "TEST",
+        "link": "https://tedyeates.github.io/OpenData/#map",
+        "image": "test.png",
+        "description": "Test Test Test TEst Test TESt SETse"
+    },
+    {
+        "hexagon" : 9,
+        "title": "Hou'se Ny Area",
+        "link": "https://tedyeates.github.io/OpenData/#map",
+        "image": "housemyarea.png",
+        "description": "A website to help people look at places to live by comparing crime rates, school locations, house prices etc."
+    },
+    {
+        "hexagon" : 3,
+        "title": "Crochet",
+        "link": "https://www.youtube.com/watch?v=aAxGTnVNJiE",
+        "image": "crochet.jpg",
+        "description": "Crochet projects that vary from Toys to anything else."
+ 
+    }
+
+]
