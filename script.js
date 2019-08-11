@@ -3,14 +3,19 @@ var windowHeight = $(window).height();
 var maxNoHorizontalHexagons = 4;
 var maxNoVerticalHexagons = 3;
 
+var togglePopup = function() {
+
+    $(".popup").toggle("drop", 500);
+
+};
 
 
 
 
 var draw;
-$(document).ready(function () {
+$(document).ready(function() {
 
-    $.getJSON("data/projects.json", function (data) {
+    $.getJSON("data/projects.json", function(data) {
         //sort the data by the hexagon number
         data.sort((a, b) => (a.hexagon > b.hexagon) ? 1 : -1);
         console.log(data);
@@ -19,17 +24,19 @@ $(document).ready(function () {
 
         draw = SVG('drawing').size(windowWidth, windowHeight);
 
+        var marginAmount = 200;
 
-
+        var adjustedWindowWidth = windowWidth - marginAmount;
+        var adjustedWindowHeight = windowHeight - marginAmount;
 
 
         /* ****** */
         //these hexagons are pointy side up
-        var hexagonWidth = windowWidth / 6.0; //middle row has 6 hexagons and fills width
+        var hexagonWidth = adjustedWindowWidth / 6.0; //middle row has 6 hexagons and fills width
         var hexagonHeight = hexagonWidth / Math.sqrt(3) * 2; // https://www.redblobgames.com/grids/hexagons/
 
         // or
-        var hexagonHeight2 = windowHeight / 2.5;
+        var hexagonHeight2 = adjustedWindowHeight / 2.5;
         var hexagonWidth2 = hexagonHeight2 / 2.0 * Math.sqrt(3);
 
         if (hexagonHeight2 < hexagonHeight) {
@@ -41,16 +48,16 @@ $(document).ready(function () {
         var numRows = 3;
         var largeRowSize = 6;
         var allHexagonsWidth = hexagonWidth * largeRowSize;
-        var columnOffset = (allHexagonsWidth + 0.01 < windowWidth ? (windowWidth - allHexagonsWidth) / 2.0 : 0);
+        var columnOffset = (allHexagonsWidth + 0.01 < adjustedWindowWidth ? (adjustedWindowWidth - allHexagonsWidth) / 2.0 : 0);
         var currentHexagon = 0;
 
         for (var row = 0; row < numRows; row++) {
             for (var column = 0; column < (smallRow ? largeRowSize - 1 : largeRowSize); column++) {
                 currentHexagon++;
-                var project = data.find(function (obj) {
+                var project = data.find(function(obj) {
                     return obj.hexagon === currentHexagon;
                 });
-                drawHexagon(project, column * hexagonWidth + (smallRow ? hexagonWidth : 0.5 * hexagonWidth) + columnOffset, 0.75 * row * hexagonHeight + 0.5 * hexagonHeight, hexagonWidth, hexagonHeight);
+                drawHexagon(project, column * hexagonWidth + (smallRow ? hexagonWidth : 0.5 * hexagonWidth) + columnOffset + marginAmount / 2, 0.75 * row * hexagonHeight + 0.5 * hexagonHeight + marginAmount / 2, hexagonWidth, hexagonHeight);
             }
             smallRow = !smallRow;
         }
@@ -77,7 +84,7 @@ function drawHexagon(projectInfo, cx, cy, w, h) {
     var scale = 1.5;
     var points = "";
     var scaledPoints = "";
-    var f = function (x, y) {
+    var f = function(x, y) {
         x = Math.round(x);
         y = Math.round(y);
         var scaledX = Math.round(scale * (x - cx) + cx);
@@ -89,24 +96,24 @@ function drawHexagon(projectInfo, cx, cy, w, h) {
     }
     f(cx - w / 2.0, cy - h / 4.0); //top left
     f(cx, cy - h / 2.0); //top
-    f(cx + w / 2.0, cy - h / 4.0);//top right
+    f(cx + w / 2.0, cy - h / 4.0); //top right
     f(cx + w / 2.0, cy + h / 4.0); // bottom right
-    f(cx, cy + h / 2.0);//bottom
-    f(cx - w / 2.0, cy + h / 4.0);//bottom left
+    f(cx, cy + h / 2.0); //bottom
+    f(cx - w / 2.0, cy + h / 4.0); //bottom left
 
 
 
     var polygon = draw.polygon(points.trim())
         .stroke({ width: 3 })
-        .attr("vector-effect", "non-scaling-stroke");
-    ;
+        .attr("vector-effect", "non-scaling-stroke")
+        .attr("class", "hexagon");;
 
     var animateMouseover = draw.element('animate');
     animateMouseover.attr({
         begin: "indefinite",
         fill: "freeze", //stay in the final frame of the animation on completion
         attributeName: "points",
-        dur: "100ms",
+        dur: "200ms",
         to: scaledPoints.trim(),
     });
     polygon.node.appendChild(animateMouseover.node);
@@ -116,7 +123,7 @@ function drawHexagon(projectInfo, cx, cy, w, h) {
         begin: "indefinite",
         fill: "freeze", //stay in the final frame of the animation on completion
         attributeName: "points",
-        dur: "100ms",
+        dur: "200ms",
         to: points.trim(),
     });
     polygon.node.appendChild(animateMouseout.node);
@@ -125,11 +132,11 @@ function drawHexagon(projectInfo, cx, cy, w, h) {
     if (projectInfo === undefined) {
 
         polygon
-            .fill('white')
+            .fill('#f7f7f7')
     }
     //there is a project for this hexagon 
     else {
-        var pattern = draw.pattern(1, 1, function (add) {
+        var pattern = draw.pattern(1, 1, function(add) {
             add.rect(2 * w, 2 * h).fill("#fff");
             var i = add.image("images/" + projectInfo.image);
             i.attr({
@@ -138,42 +145,41 @@ function drawHexagon(projectInfo, cx, cy, w, h) {
                 width: 4 * w,
                 height: 4 * h
             });
-            polygon.mouseover(function () {
-                i.animate(100).attr({
+            polygon.mouseover(function() {
+                i.animate(200).attr({
                     x: -0.25 * w,
                     y: -0.25 * h,
                     width: 2 * w,
                     height: 2 * h
                 });
             });
-            polygon.mouseout(function () {
-                i.animate(100).attr({
+            polygon.mouseout(function() {
+                i.animate(200).attr({
                     x: -1.5 * w,
                     y: -1.5 * h,
                     width: 4 * w,
                     height: 4 * h
                 });
             });
-            
+
         });
         pattern.attr({
             patternUnits: "objectBoundingBox",
             patternContentUnits: "userSpaceOnUse",
         });
         polygon
-            //change hexagon image
-            // .fill('url(#image1)')
+        //change hexagon image
+        // .fill('url(#image1)')
             .fill(pattern);
         //.fill(draw.image("images/" + projectInfo.image, 500, 500));
     }
-    polygon.mouseover(function () {
+    polygon.mouseover(function() {
         polygon.front();
         document.getElementById(animateMouseover.id()).beginElement();
     });
-    polygon.mouseout(function () {
+    polygon.mouseout(function() {
         document.getElementById(animateMouseout.id()).beginElement();
     });
+    polygon.click(togglePopup);
 
 }
-
-

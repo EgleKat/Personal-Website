@@ -2,18 +2,31 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <meta name="description" content="">
-  <title>Egle Kat</title>
-  <link rel="stylesheet" type="text/css" href="style.css">
-  <script src="libraries/SVG.js/svg.js"></script>
-  <script src="libraries/jquery/jquery-3.4.1.js"></script>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <title>Egle Kat</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="libraries/SVG.js/svg.js"></script>
+    <script src="libraries/jquery/jquery-3.4.1.js"></script>
+    <script src="libraries/jquery-ui/jquery-ui.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Cinzel+Decorative&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css?family=Graduate&display=swap" rel="stylesheet">
+
+
 
 
 </head>
 
 <body>
-  <svg id="drawing">
+    <header>
+        <h1>Egle Kat</h1>
+    </header>
+    <div class="popup">
+
+    </div>
+    <svg id="drawing">
 
     <defs>
       <pattern id="image1" width="1" height="1">
@@ -23,7 +36,7 @@
 
 
     <polygon points="850,75 958,137.5 958,262.5 850,325 742,262.6 742,137.5" fill="url(#image1)" stroke="#000"
-      style="cursor: pointer;" onmouseover="document.getElementById('hover-animation').beginElement()"
+      style="cursor: pointer; display:none;" onmouseover="document.getElementById('hover-animation').beginElement()"
       onclick="document.getElementById('click-animation').beginElement()"
       onmouseout="document.getElementById('default-animation').beginElement()">
       <animate begin="shape.click" id="hover-animation" begin="indefinite" fill="freeze" attributeName="points"
@@ -43,9 +56,12 @@
 
   </svg>
 
+    <footer>Created by
+        <a href="https://www.linkedin.com/in/egle-katilauskaite-94346b151/"> Egle Kat</a>&nbsp;&nbsp;|&nbsp;&nbsp;Font used -
+        <a href='http://signato.lt/en/'>Signato</a>
+    </footer>
 
-
-  <script src="script.js"></script>
 </body>
+<script src="script.js"></script>
 
 </html>
