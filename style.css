@@ -1,76 +1,133 @@
-/* signato */
-
-@font-face {
-    font-family: 'Signato';
-    font-style: normal;
-    font-weight: 400;
-    font-display: swap;
-    src: local('Signato'), local('Signato-Regular'), url("fonts/Signato-Regular.otf") format('truetype');
-}
-
-body,
-html {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 100%;
-    background-color: ;
-}
-
-a {
-    text-decoration: none;
-    font-weight: bold;
-    color: white;
-}
-
-#drawing {
-    position: absolute;
-    top: 0;
-    left: 0;
-    margin: 0;
-    padding: 0;
-}
-
-.hexagon {
-    background-color: white;
-    cursor: pointer;
-}
-
-.popup {
-    position: absolute;
-    background-color: whitesmoke;
-    width: 48%;
-    height: 90%;
-    padding: 20px;
-    margin: 20px;
-    z-index: 10;
-    display: none;
-    border-radius: 2%;
-}
-
-footer {
-    position: fixed;
-    bottom: 0;
-    background-color: #f7f7f7;
-    color: #595555;
-    width: 100%;
-    padding: 1em;
-    margin: 0;
-    left: 0;
-    right: 0;
-    font-family: "Roboto"
-}
-
-footer a {
-    color: #595555;
-}
-
-header {
-    text-align: center;
-    height: 100px;
-    font-family: 'Signato';
-    font-size: 200%;
-    padding: 0;
-    position: relative;
-    top: -20px;
-}
+    /* signato */
+    
+    @font-face {
+        font-family: 'Signato';
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+        src: local('Signato'), local('Signato-Regular'), url("fonts/Signato-Regular.otf") format('truetype');
+    }
+    
+    body,
+    html {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        font-family: Roboto;
+    }
+    
+    a {
+        text-decoration: none;
+        font-weight: bold;
+        color: white;
+    }
+    
+    #drawing {
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .hexagon.active {
+        background-color: white;
+        cursor: pointer;
+    }
+    
+    .hexagon {
+        cursor: auto;
+    }
+    
+    .popup {
+        background-color: whitesmoke;
+        width: 30%;
+        height: auto;
+        max-height: 90%;
+        min-height: 50%;
+        padding: 20px;
+        margin: 20px;
+        z-index: 10;
+        display: none;
+        border-radius: 1%;
+        min-height: 50%;
+        margin: 5px;
+        position: fixed;
+        right: 5%;
+        top: 8%;
+        overflow: auto;
+        font-size: 18px;
+        font-family: "Martel";
+        box-shadow: 0px 0px 4px 0px rgba(145, 145, 145, 1);
+    }
+    
+    .popup h1 {
+        font-size: 200%;
+    }
+    
+    footer {
+        position: fixed;
+        bottom: 0;
+        background-color: #f7f7f7;
+        color: #595555;
+        width: 100%;
+        padding: 1em;
+        margin: 0;
+        left: 0;
+        right: 0;
+        font-family: "Roboto"
+    }
+    
+    footer a {
+        color: #595555;
+    }
+    
+    header {
+        text-align: center;
+        height: 100px;
+        font-family: 'Signato';
+        font-size: 200%;
+        padding: 0;
+        position: relative;
+        top: -20px;
+    }
+    
+    .popupImage {
+        border-radius: 5px;
+        width: 100%;
+        max-width: 800px;
+        height: auto;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    
+    .popupInfo {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    
+    a.externalProjectLink {
+        transition: all 0.5s cubic-bezier(0.65, -0.25, 0.25, 1.95);
+        font-weight: 900;
+        color: #202121;
+        padding: 1.25rem 2rem;
+        background: #fff;
+        text-transform: uppercase;
+        position: relative;
+        display: inline-block;
+        cursor: pointer;
+        outline: none;
+        border: 0;
+        vertical-align: middle;
+        text-decoration: none;
+        font-size: inherit;
+        font-family: inherit;
+        letter-spacing: normal;
+    }
+    
+    a.externalProjectLink:hover,
+    a.externalProjectLink:focus,
+    a.externalProjectLink:active {
+        letter-spacing: 0.125rem;
+    }

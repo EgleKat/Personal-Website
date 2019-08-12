@@ -166,8 +166,13 @@ function drawHexagon(projectInfo, cx, cy, w, h) {
         polygon
         //change hexagon image
         // .fill('url(#image1)')
-            .fill(pattern);
+            .fill(pattern)
+            .attr("class", "hexagon active");
         //.fill(draw.image("images/" + projectInfo.image, 500, 500));
+        polygon.click(function() {
+            togglePopup(projectInfo);
+        });
+
     }
     polygon.mouseover(function() {
         polygon.front();
@@ -176,7 +181,5 @@ function drawHexagon(projectInfo, cx, cy, w, h) {
     polygon.mouseout(function() {
         document.getElementById(animateMouseout.id()).beginElement();
     });
-    polygon.click(function() {
-        togglePopup(projectInfo);
-    });
+
 }

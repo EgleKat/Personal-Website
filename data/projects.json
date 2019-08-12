@@ -1,24 +1,34 @@
 [{
         "hexagon": 10,
         "title": "TEST",
-        "link": "https://tedyeates.github.io/OpenData/#map",
+        "link": "",
         "image": "test.png",
         "description": "TEST TEST ETST ETSE T",
-        "shortDescriptions": [
-            { "Technologies used": "JavaScript, Leaflet" },
-            { "Type of Project": "Group" }
+        "shortDescriptions": [{
+                "title": "Technologies used",
+                "description": "JavaScript, Leaflet"
+            },
+            {
+                "title": "Technologies used",
+                "description": "JavaScript, Leaflet"
+            }
 
         ]
     },
     {
         "hexagon": 9,
-        "title": "Hou'se Ny Area",
+        "title": "Hou'se My Area",
         "link": "https://tedyeates.github.io/OpenData/#map",
         "image": "housemyarea.png",
         "description": "A website to help people look at places to live by comparing crime rates, school locations, house prices etc.",
-        "shortDescriptions": [
-            { "Technologies used": "JavaScript, Leaflet" },
-            { "Type of Project": "Group" }
+        "shortDescriptions": [{
+                "title": "Technologies used",
+                "description": "JavaScript, Leaflet"
+            },
+            {
+                "title": "Technologies used",
+                "description": "JavaScript, Leaflet"
+            }
 
         ]
     },
@@ -28,9 +38,14 @@
         "link": "https://www.youtube.com/watch?v=aAxGTnVNJiE",
         "image": "crochet.jpg",
         "description": "Crochet projects that vary from Toys to anything else.",
-        "shortDescriptions": [
-            { "Technologies used": "JavaScript, Leaflet" },
-            { "Type of Project": "Group" }
+        "shortDescriptions": [{
+                "title": "Technologies used",
+                "description": "JavaScript, Leaflet"
+            },
+            {
+                "title": "Technologies used",
+                "description": "JavaScript, Leaflet"
+            }
 
         ]
 
