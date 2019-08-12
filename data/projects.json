@@ -1,25 +1,39 @@
-[
-    {
-        "hexagon" : 10,
+[{
+        "hexagon": 10,
         "title": "TEST",
         "link": "https://tedyeates.github.io/OpenData/#map",
         "image": "test.png",
-        "description": "Test Test Test TEst Test TESt SETse"
+        "description": "TEST TEST ETST ETSE T",
+        "shortDescriptions": [
+            { "Technologies used": "JavaScript, Leaflet" },
+            { "Type of Project": "Group" }
+
+        ]
     },
     {
-        "hexagon" : 9,
+        "hexagon": 9,
         "title": "Hou'se Ny Area",
         "link": "https://tedyeates.github.io/OpenData/#map",
         "image": "housemyarea.png",
-        "description": "A website to help people look at places to live by comparing crime rates, school locations, house prices etc."
+        "description": "A website to help people look at places to live by comparing crime rates, school locations, house prices etc.",
+        "shortDescriptions": [
+            { "Technologies used": "JavaScript, Leaflet" },
+            { "Type of Project": "Group" }
+
+        ]
     },
     {
-        "hexagon" : 3,
+        "hexagon": 3,
         "title": "Crochet",
         "link": "https://www.youtube.com/watch?v=aAxGTnVNJiE",
         "image": "crochet.jpg",
-        "description": "Crochet projects that vary from Toys to anything else."
- 
+        "description": "Crochet projects that vary from Toys to anything else.",
+        "shortDescriptions": [
+            { "Technologies used": "JavaScript, Leaflet" },
+            { "Type of Project": "Group" }
+
+        ]
+
     }
 
 ]

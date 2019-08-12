@@ -3,11 +3,7 @@ var windowHeight = $(window).height();
 var maxNoHorizontalHexagons = 4;
 var maxNoVerticalHexagons = 3;
 
-var togglePopup = function() {
 
-    $(".popup").toggle("drop", 500);
-
-};
 
 
 
@@ -180,6 +176,7 @@ function drawHexagon(projectInfo, cx, cy, w, h) {
     polygon.mouseout(function() {
         document.getElementById(animateMouseout.id()).beginElement();
     });
-    polygon.click(togglePopup);
-
+    polygon.click(function() {
+        togglePopup(projectInfo);
+    });
 }
