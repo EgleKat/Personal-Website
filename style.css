@@ -44,7 +44,7 @@
         background-color: whitesmoke;
         width: 30%;
         height: auto;
-        max-height: 90%;
+        max-height: 80%;
         min-height: 50%;
         padding: 20px;
         margin: 20px;
@@ -57,13 +57,19 @@
         right: 5%;
         top: 8%;
         overflow: auto;
-        font-size: 18px;
+        font-size: 1rem;
         font-family: "Martel";
         box-shadow: 0px 0px 4px 0px rgba(145, 145, 145, 1);
     }
     
     .popup h1 {
-        font-size: 200%;
+        font-size: 2.5rem;
+    }
+    
+    .popup h3 {
+        display: inline;
+        margin-right: 10px;
+        font-size: 1.2rem;
     }
     
     footer {
@@ -107,12 +113,11 @@
         margin-bottom: 10px;
     }
     
-    a.externalProjectLink {
+    .popup a {
         transition: all 0.5s cubic-bezier(0.65, -0.25, 0.25, 1.95);
         font-weight: 900;
         color: #202121;
         padding: 1.25rem 2rem;
-        background: #fff;
         text-transform: uppercase;
         position: relative;
         display: inline-block;
@@ -124,10 +129,20 @@
         font-size: inherit;
         font-family: inherit;
         letter-spacing: normal;
+        margin-bottom: 10px;
     }
     
-    a.externalProjectLink:hover,
-    a.externalProjectLink:focus,
-    a.externalProjectLink:active {
+    .popup a.back {
+        background: #fde7e7;
+    }
+    
+    .popup a.externalProjectLink {
+        background: #fff;
+        float: right;
+    }
+    
+    .popup a:hover,
+    .popup a:focus,
+    .popup a:active {
         letter-spacing: 0.125rem;
     }

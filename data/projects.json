@@ -1,50 +1,121 @@
 [{
-        "hexagon": 10,
-        "title": "TEST",
-        "link": "",
-        "image": "test.png",
-        "description": "TEST TEST ETST ETSE T",
-        "shortDescriptions": [{
-                "title": "Technologies used",
-                "description": "JavaScript, Leaflet"
-            },
-            {
-                "title": "Technologies used",
-                "description": "JavaScript, Leaflet"
-            }
-
-        ]
-    },
-    {
-        "hexagon": 9,
+        "hexagon": 2,
         "title": "Hou'se My Area",
         "link": "https://tedyeates.github.io/OpenData/#map",
         "image": "housemyarea.png",
-        "description": "A website to help people look at places to live by comparing crime rates, school locations, house prices etc.",
+        "description": "A website to help people look at places to live by comparing crime rates, school locations, house prices etc. The website is aimed at people who are looking to move house.\nCrime data is displayed real-time (to the closest month).",
         "shortDescriptions": [{
-                "title": "Technologies used",
-                "description": "JavaScript, Leaflet"
-            },
-            {
-                "title": "Technologies used",
-                "description": "JavaScript, Leaflet"
-            }
-
-        ]
+            "title": "The goal",
+            "description": "Use at least 3 datasets on the internet and create a prototype for a chosen audience."
+        }, {
+            "title": "Technologies used",
+            "description": "JavaScript, HTML, CSS, D3.js, Leaflet"
+        }]
     },
     {
         "hexagon": 3,
         "title": "Crochet",
-        "link": "https://www.youtube.com/watch?v=aAxGTnVNJiE",
+        "link": "CHANGE ME",
         "image": "crochet.jpg",
         "description": "Crochet projects that vary from Toys to anything else.",
         "shortDescriptions": [{
+            "title": "Technologies used",
+            "description": "Yarn package manager, CrotchetHook.js"
+        }]
+
+    },
+    {
+        "hexagon": 4,
+        "title": "Camel Carry",
+        "link": "CHANGE ME",
+        "image": "camel-carry.jpg",
+        "description": "Camel carry is a puzzle game loosely similar to river crossing problems, where the player must transport items using their camel in the time limit, with different restrictions.",
+        "shortDescriptions": [{
+            "title": "Technologies used",
+            "description": "Unity, C#"
+        }]
+
+    },
+    {
+        "hexagon": 5,
+        "title": "Out with the old... In with the new (Musicians of Brehmen)",
+        "link": "https://rookwood101.github.io/brehmens-musicians/",
+        "image": "musicians-of-brehmen.png",
+        "description": "This game was a labour of love! It features a branching story engine with multiple endings and different scenarios.",
+        "shortDescriptions": [{
+            "title": "Technologies used",
+            "description": "Unity, C#"
+        }]
+
+    },
+    {
+        "hexagon": 8,
+        "title": "Dungeon Run 52",
+        "link": "CHANGE ME",
+        "image": "dungeon-run-52.jpg",
+        "description": "A procedurally generated rogue-like.",
+        "shortDescriptions": [{
+            "title": "Technologies used",
+            "description": "Unity, C#"
+        }]
+
+    },
+    {
+        "hexagon": 10,
+        "title": "Lithuanian Language Learning App",
+        "link": "https://eglekat.github.io/Part-3-Project/",
+        "image": "lithuanian.jpg",
+        "description": "For my 3rd year project, I created a single page application providing a crash-course introduction to the Lithuanian language. \nTo test it, I performed tests with human participants and assessed their Lithuanian knowledge before and after using the app.",
+        "shortDescriptions": [{
+            "title": "The goal",
+            "description": "Prove that the Lithuanian language can be taught with an online tool."
+        }, {
+            "title": "Technologies used",
+            "description": "HTML, JavaScript, CSS"
+        }]
+
+    },
+    {
+        "hexagon": 14,
+        "title": "D3 Visualisation and Analaysis",
+        "link": "https://eglekat.github.io/Data_Visualisation_CW/",
+        "image": "d3-1.jpg",
+        "description": "This page was created to solve an issue with data. The issue chosen was - 'Are EU Immigrants Harming the People of the UK?'\nThe project uses real datasets and utilises interactive charts to include the reader and to draw conclusions with the author.",
+        "shortDescriptions": [{
+            "title": "Technologies used",
+            "description": "HTML, JavaScript, CSS, D3.js, dc.js, Tableau"
+        }]
+
+    },
+    {
+        "hexagon": 15,
+        "title": "D3 Visualisation",
+        "link": "https://eglekat.github.io/D3-with-cleaned-data/",
+        "image": "d3-2.jpg",
+        "description": "This project was part of a coursework. The goal was to clean a (very) messy dataset, extract important information from it and to apply it in creating a visualisation. \nThe project is presented in terms of an interactive page/report.",
+        "shortDescriptions": [{
+            "title": "Technologies used",
+            "description": "HTML, JavaScript,CSS, D3.js, OpenRefine, Microsoft Excel"
+        }]
+
+    },
+    {
+        "hexagon": 9,
+        "title": "About Me",
+        "link": null,
+        "image": "dancing-person.jpg",
+        "description": "My name is Egle Kat and I am a bat.",
+        "shortDescriptions": [{
                 "title": "Technologies used",
-                "description": "JavaScript, Leaflet"
+                "description": "HumanScript, fleshy.hs"
             },
             {
-                "title": "Technologies used",
-                "description": "JavaScript, Leaflet"
+                "title": "Software Engineer Intern, Orthoview",
+                "description": "I made a log file analyser with dynamic graphs."
+            },
+            {
+                "title": "Service Delivery Intern, Fidessa",
+                "description": "I designed and implemented a front end for an server-upgrade manager."
             }
 
         ]
