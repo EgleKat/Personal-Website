@@ -3,7 +3,7 @@
         "title": "Hou'se My Area",
         "link": "https://tedyeates.github.io/OpenData/",
         "image": "housemyarea.png",
-        "description": "A website to help people look at places to live by comparing crime rates, school locations, house prices etc.<br>Crime data is displayed real-time (to the closest month).",
+        "description": "I worked in a team of four to create a project utilising open data on the internet. We created a website to help people look at places to live by comparing crime rates, school locations, house prices etc.<br>I developed the single page website alongside another student.<br>Crime data is displayed real-time (to the closest month).",
         "shortDescriptions": [{
             "title": "The goal",
             "description": "Use at least 3 datasets on the internet and create a prototype for a chosen audience."
@@ -77,7 +77,7 @@
         "title": "Lithuanian Language Learning App",
         "link": "https://eglekat.github.io/Part-3-Project/",
         "image": "lithuanian.jpg",
-        "description": "For my 3rd year project, I created a single page application providing a crash-course introduction to the Lithuanian language. <br>To test it, I performed tests with human participants and assessed their Lithuanian knowledge before and after using the app.",
+        "description": "For my 3rd year project, I created a single page application providing a crash-course introduction to the Lithuanian language. <br>To test it, I performed individual qualitative tests with human participants and assessed their Lithuanian knowledge before and after using the app.",
         "shortDescriptions": [{
             "title": "The goal",
             "description": "Prove that the Lithuanian language can be taught with an online tool."
