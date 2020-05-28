@@ -14,6 +14,21 @@
     },
     {
         "hexagon": 3,
+        "title": "Sushi Go Party! Counter",
+        "link": "http://www.sushi-go-counter.com",
+        "image": "sushi-go.jpg",
+        "description": "A personal project with NodeJS. The webpage is a score counter for a card game, which suprisingly didn't exist before. Each card has different effects on your score and scoring it manually can be somewhat of a nightmare. <br> I decided to implement it myself and learn more about Node and publishing websites. It features a noSQL database and a lot of async-await programming in the backend and some examples of reactive UI. <br>The design is simplistic with the focus being the functionality of getting the right score out of the played cards. ",
+        "shortDescriptions": [{
+            "title": "The goal",
+            "description": "Create a website for calculating scores for the board game 'Sushi Go Party!'."
+        }, {
+            "title": "Technologies used",
+            "description": "NodeJS, Express, Pug, JavaScript, HTML, Bootstrap, Mongoose, MongoDB and a bit of Vue.js"
+        }]
+
+    },
+    {
+        "hexagon": 4,
         "title": "Crochet",
         "link": "https://imgur.com/a/H2Cdz4D",
         "image": "crochet.jpg",
@@ -28,7 +43,7 @@
 
     },
     {
-        "hexagon": 4,
+        "hexagon": 5,
         "title": "Camel Carry",
         "link": "https://eglekat.github.io/Camel-Carry/",
         "image": "camel-carry.jpg",
@@ -43,7 +58,7 @@
 
     },
     {
-        "hexagon": 5,
+        "hexagon": 7,
         "title": "Out with the old... In with the new (Musicians of Brehmen)",
         "link": "https://rookwood101.github.io/brehmens-musicians/",
         "image": "musicians-of-brehmen.png",
