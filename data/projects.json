@@ -25,7 +25,7 @@
     {
         "hexagon": 3,
         "title": "Sushi Go Party! Counter",
-        "link": "https://www.sushi-go-counter-app.fly.dev",
+        "link": "https://sushi-go-counter-app.fly.dev",
         "image": "sushi-go.jpg",
         "description": "A personal project with NodeJS. The webpage is a score counter for a card game, which suprisingly didn't exist before. Each card has different effects on your score and scoring it manually can be somewhat of a nightmare. <br> I decided to implement it myself and learn more about Node and publishing websites. It features a noSQL database and a lot of async-await programming in the backend and some examples of reactive UI. <br>The design is simplistic with the focus being the functionality of getting the right score out of the played cards. ",
         "shortDescriptions": [{
